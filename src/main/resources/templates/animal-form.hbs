@@ -1,0 +1,35 @@
+{{#partial "content"}}
+
+    <div class="jumbotron">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="/rangers/new">Add New Ranger</a>
+                    <a class="nav-item nav-link" href="/all/animals">View all Animals</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <h1>Add an animal</h1>
+
+    <form action="/animals/new" method="post">
+        {{#if rangers}}
+            <label for="animalName">animalName</label>
+            <input class="form-control form-control-lg" id="animalName" name="animalName" type="text">
+            <label for="rangerId">Which Ranger Sighted this animal</label>
+            <select id="rangerId" name="rangerId">
+                {{#each rangers}}
+                    <option value="{{id}}">{{rangerName}}</option>
+                {{/each}}
+            </select>
+        {{else}}
+            <h3> Add a new Ranger first <a href="/rangers/new">Add one here.</a> </h3>
+        {{/if}}
+        <button type="submit" class="btn btn-default">Go!</button>
+    </form>
+
+{{/partial}}
+
+{{> layout.hbs}}

@@ -1,0 +1,33 @@
+{{#partial "content"}}
+
+    <div class="jumbotron">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="/rangers/new">Add New Ranger</a>
+                    <a class="nav-item nav-link" href="/all/animals">View all Animals</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <h1 id="index-title">Wild-life Tracker</h1>
+
+    {{#if rangers}}
+        {{#each rangers}}
+            <div id="each-ranger">
+            <p id="each-rangerName">Ranger Name: {{rangerName}}</p>
+            <a class="btn btn-primary" href="/rangers/{{id}}" role="button">View Ranger Details</a>
+            </div>
+        {{/each}}
+    {{else}}
+        <a class="btn btn-primary" href="/rangers/new" role="button">Register first ranger</a>
+    {{/if}}
+
+    <a class="btn btn-primary" href="/animals/new" role="button">Add new Animal</a>
+    <a class="btn btn-primary" href="/endangers/new" role="button">Add Endangered Animal</a>
+
+{{/partial}}
+
+{{> layout.hbs}}

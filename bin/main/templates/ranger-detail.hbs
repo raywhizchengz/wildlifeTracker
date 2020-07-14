@@ -1,0 +1,35 @@
+{{#partial "content"}}
+
+    <div class="jumbotron">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="/rangers/new">Add New Ranger</a>
+                    <a class="nav-item nav-link" href="/all/animals">View all Animals</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <h1>{{ranger.rangerName}}</h1>
+    <p>Here are all the animals sighted by {{ranger.rangerName}} from {{ranger.rangerLocation}}:</p>
+    <ul>
+        {{#each animals}}
+            <li>
+                <p>{{animalName}}</p>
+            </li>
+        {{/each}}
+    </ul>
+    <p>Here are all the endangered animals sighted by {{ranger.rangerName}} from {{ranger.rangerLocation}}:</p>
+    <ul>
+        {{#each endangers}}
+            <li>
+                <p>{{endangeredName}}</p>
+            </li>
+        {{/each}}
+    </ul>
+    <a class="btn btn-info" href="/rangers/{{ranger.id}}/edit" role="button">Edit Ranger</a>
+{{/partial}}
+
+{{> layout.hbs}}
