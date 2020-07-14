@@ -1,0 +1,30 @@
+body {
+  font-family: 'Bellefair', serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 40px;
+  font-family: 'Bellefair', serif;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+img {
+  border-radius: 5%;
+}
+
+a.delete {
+  color: red;
+}
+
+a{
+  font-size: 12pt;
+}
+
+p, label{
+  font-size: 12pt;
+}

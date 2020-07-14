@@ -1,0 +1,22 @@
+<h2 class="text-center">$animal.getName()</h2>
+<div class="row">
+  <div class="col-sm-3 col-sm-offset-3">
+    <h3>Animal Details:</h3>
+    <h5>Type: $animal.getType()</em></h5>
+    #if($animal.getType().equals("Endangered"))
+      <h5>Health: $endangered.getHealth()</h5>
+      <h5>Age: $endangered.getAge()</h5>
+    #end
+    <a href="/animals/$animal.getId()/edit" class="edit"> [edit]</a>
+    <a href="/animals/$animal.getId()/delete" class="delete"> [delete]</a>
+  </div>
+  <div class="col-sm-3">
+    <h3>All Sightings:</h3>
+    #if($Sighting.allByAnimal($animal.getId()).size() == 0)
+      <p><em>none</em></p>
+    #end
+    #foreach($sighting in $Sighting.allByAnimal($animal.getId()))
+      <p>Location: $sighting.getLocation(), Ranger: $sighting.getRangerName() <em>$sighting.getTimeSeen()</em></p>
+    #end
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<h3 class="text-center">Add Endangered Animal</h3>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <form action="/endangered/new" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="health">Health:</label>
+        <select id="health" name="health" type="text" class="form-control">
+          <option value="Healthy">Healthy</option>
+          <option value="Okay">Okay</option>
+          <option value="Ill">Ill</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <select id="age" name="age" type="text" class="form-control">
+          <option value="Newborn">Newborn</option>
+          <option value="Young">Young</option>
+          <option value="Adult">Adult</option>
+        </select>
+      </div>
+      <button class="btn btn-primary form-control" type="submit" name="add-animal">Add</button>
+    </form>
+  </div>
+</div>

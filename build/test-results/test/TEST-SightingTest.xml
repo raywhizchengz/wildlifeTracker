@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SightingTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-07-14T18:28:38" hostname="maggpies" time="1.652">
+  <properties/>
+  <testcase name="save_insertsObjectIntoDatabase" classname="SightingTest" time="1.299"/>
+  <testcase name="getLocation_sightingInstantiatesWithLocation" classname="SightingTest" time="0.076"/>
+  <testcase name="equals_returnsTrueIfAllPropertiesAreTheSame" classname="SightingTest" time="0.045"/>
+  <testcase name="getId_sightingInstantiatesWithId" classname="SightingTest" time="0.056"/>
+  <testcase name="Sighting_instantiatesCorrectly" classname="SightingTest" time="0.033"/>
+  <testcase name="getAnimalId_sightingInstantiatesWithAnimalId" classname="SightingTest" time="0.041"/>
+  <testcase name="save_assignsIdToObject" classname="SightingTest" time="0.058"/>
+  <testcase name="getRangerName_sightingInstantiatesWithRangerName" classname="SightingTest" time="0.04"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

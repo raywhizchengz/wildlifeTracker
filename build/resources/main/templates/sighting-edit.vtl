@@ -1,0 +1,37 @@
+<h3 class="text-center">Edit Sighting of $Animal.find($sighting.getAnimalId()).getName()</h3>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <form action="/sightings/$sighting.getId()/edit" method="post">
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <select id="location" name="location" type="text" class="form-control">
+          #if ($sighting.getLocation().equals("Zone A"))
+            <option value="Zone A" selected>Zone A</option>
+          #else
+            <option value="Zone A">Zone A</option>
+          #end
+          #if ($sighting.getLocation().equals("Zone B"))
+            <option value="Zone B" selected>Zone B</option>
+          #else
+            <option value="Zone B">Zone B</option>
+          #end
+          #if ($sighting.getLocation().equals("Zone C"))
+            <option value="Zone C" selected>Zone C</option>
+          #else
+            <option value="Zone C">Zone C</option>
+          #end
+          #if ($sighting.getLocation().equals("Zone D"))
+            <option value="Zone D" selected>Zone D</option>
+          #else
+            <option value="Zone D">Zone D</option>
+          #end
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="rangerName">Ranger Name:</label>
+        <input type="text" name="rangerName" class="form-control" value="$sighting.getRangerName()">
+      </div>
+      <button class="btn btn-primary form-control" type="submit" name="add-sighting">Edit</button>
+    </form>
+  </div>
+</div>
